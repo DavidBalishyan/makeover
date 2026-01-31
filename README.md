@@ -24,7 +24,7 @@ You can install Makeover using itself!
 
 2. Run the install target:
    ```bash
-   ./main.py
+   ./main.py install
    ```
 
 This will install the `makeover` binary to `~/.local/bin`. Ensure this directory is in your `$PATH`.
