@@ -1,2 +1,2 @@
 buildfile linguist-detectable=true
-buildfile linguist-language=buildfile
+buildfile linguist-language=Makefile
