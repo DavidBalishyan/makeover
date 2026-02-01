@@ -1,5 +1,10 @@
 # Makeover
 
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)`
+[![GitHub last commit](https://img.shields.io/github/last-commit/DavidBalishyan/makeover)](https://github.com/DavidBalishyan/makeover/commits/main)
+
 Makeover is a simple, user-friendly build system wrapper designed to be a cleaner alternative to Make. It uses a simplified syntax in a `buildfile` to manage your project's build targets and dependencies.
 
 ## Features

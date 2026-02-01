@@ -29,3 +29,14 @@ reinstall: uninstall install
 clean:
     echo "Cleaning temporary files..."
     rm -rf __pycache__
+
+lint:
+    pylint ${src}
+
+create-env:
+    python3 -m venv .venv
+
+install-deps:
+    .venv/bin/pip3 install -r requirements.txt
+
+setup: create-env install-deps
