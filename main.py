@@ -25,7 +25,8 @@ class BuildSystem:
         current_target = None
         current_group = "General"
         pending_doc = []
-        
+
+       # https://stackoverflow.com/questions/1369526/what-is-the-python-keyword-with-used-for#1369553 
         with open(self.buildfile, 'r') as f:
             for line_num, line in enumerate(f, 1):
                 raw_line = line.rstrip()
@@ -38,23 +39,15 @@ class BuildSystem:
                     pending_doc = []
                     continue
 
-                # Empty lines reset pending doc unless it's a block of comments
                 if not stripped:
                     if current_target:
-                         # Inside a target, empty lines might be okay but here we treat it as end of non-indented block
-                         # But wait, indented lines are commands.
                          pass
                     else:
-                        # Outside target, empty line resets doc cache usually? 
-                        # Let's say doc comments must be immediately adjacent.
                         pending_doc = []
                     continue
 
                 # Comments
                 if stripped.startswith('#'):
-                    # If we are inside a target, this is just a comment in the command block (ignored by us as it's not indented command?)
-                    # Wait, we skip non-indented lines.
-                    # If it's a comment at top level, it might be a doc for the next target.
                     if not current_target:
                         comment_content = stripped[1:].strip()
                         pending_doc.append(comment_content)
@@ -174,6 +167,7 @@ class BuildSystem:
 
         if should_run:
             self.log(f"Building target: {target_name}")
+            # For logging purposes
             for cmd in target_info['commands']:
                 expanded_cmd = self.expand_vars(cmd)
                 # print(f"  > {expanded_cmd}")
