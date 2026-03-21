@@ -9,7 +9,7 @@ class BuildError(Exception):
     pass
 
 class BuildSystem:
-    def __init__(self, buildfile="buildfile"):
+    def __init__(self, buildfile="Buildfile"):
         self.buildfile = buildfile
         self.variables: Dict[str, str] = {}
         self.targets: Dict[str, Dict] = {}
