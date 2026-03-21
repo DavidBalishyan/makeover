@@ -5,7 +5,7 @@
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DavidBalishyan/makeover)](https://github.com/DavidBalishyan/makeover/commits/main)
 
-Makeover is a simple, user-friendly build system wrapper designed to be a cleaner alternative to Make. It uses a simplified syntax in a `buildfile` to manage your project's build targets and dependencies.
+Makeover is a simple, user-friendly build system wrapper designed to be a cleaner alternative to Make. It uses a simplified syntax in a `Buildfile` to manage your project's build targets and dependencies.
 
 ## Features
 
@@ -36,9 +36,9 @@ This will install the `makeover` binary to `~/.local/bin`. Ensure this directory
 
 ## Usage
 
-Create a file named `buildfile` in your project root.
+Create a file named `Buildfile` in your project root.
 
-### Example `buildfile`
+### Example `Buildfile`
 
 ```makefile
 # Define variables
